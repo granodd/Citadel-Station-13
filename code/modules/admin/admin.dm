@@ -605,20 +605,6 @@
 	world.update_status()
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle AI", "[!alai ? "Disabled" : "Enabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
-/datum/admins/proc/toggleMulticam()
-	set category = "Server"
-	set desc="Turn AI multicam on and off."
-	set name="Toggle Multicam"
-	var/almcam = CONFIG_GET(flag/allow_multicam)
-	CONFIG_SET(flag/allow_multicam, !almcam)
-	if (almcam)
-		to_chat(world, "<B>The AI no longer has multicam.</B>")
-	else
-		to_chat(world, "<B>The AI now has multicam.</B>")
-	log_admin("[key_name(usr)] toggled Multicam.")
-	world.update_status()
-	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle Multicam", "[!almcam ? "Disabled" : "Enabled"]"))
-
 /datum/admins/proc/toggleaban()
 	set category = "Server"
 	set desc="Respawn basically"

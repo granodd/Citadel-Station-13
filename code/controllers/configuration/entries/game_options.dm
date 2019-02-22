@@ -62,8 +62,6 @@
 
 /datum/config_entry/flag/allow_ai	// allow ai job
 
-/datum/config_entry/flag/allow_multicam //whether or not the multicam is on or off
-
 /datum/config_entry/flag/disable_human_mood
 
 /datum/config_entry/flag/disable_secborg	// disallow secborg module to be chosen.
